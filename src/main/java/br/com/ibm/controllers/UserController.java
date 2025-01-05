@@ -30,9 +30,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    /**
-     * Cria um novo usuário.
-     */
+    // Cria um novo usuário.
     @PostMapping("/user")
     public ResponseEntity<User> saveUser(@RequestBody @Valid UserDTO userDTO) {
         var user = new User();
@@ -41,18 +39,14 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(savedUser);
     }
 
-    /**
-     * Retorna todos os usuários.
-     */
+    //Retorna todos os usuários.
     @GetMapping("/user")
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> userList = userRepository.findAll();
         return ResponseEntity.ok(userList);
     }
 
-    /**
-     * Retorna um usuário específico pelo ID.
-     */
+    //Retorna um usuário específico pelo ID.
     @GetMapping("/user/{id}")
     public ResponseEntity<User> getUserById(@PathVariable("id") Long id) {
         Optional<User> userOptional = userRepository.findById(id);
@@ -61,9 +55,7 @@ public class UserController {
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
-    /**
-     * Atualiza os dados de um usuário existente.
-     */
+    //Atualiza os dados de um usuário existente.
     @PutMapping("/user/{id}")
     public ResponseEntity<User> updateUser(
             @PathVariable("id") Long id,
@@ -79,9 +71,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 
-    /**
-     * Exclui um usuário pelo ID.
-     */
+    //Exclui um usuário pelo ID.
     @DeleteMapping("/user/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable("id") Long id) {
         if (userRepository.existsById(id)) {
