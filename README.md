@@ -82,7 +82,7 @@ A entidade `User` possui as seguintes validações:
    mvn spring-boot:run
    ```
 
-5. Acesse a aplicação em: `http://localhost:8080/api/v1/user`.
+5. Acesse a aplicação em: `http://localhost:8080/api/v1/user` no Postman ou `http://localhost:8080/swagger-ui/index.html` no Browser.
 
 ## 🧪 Testes
 
