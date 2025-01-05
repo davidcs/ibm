@@ -101,8 +101,8 @@ A entidade `User` possui as seguintes validações:
 **POST** `/api/users`
 ```json
 {
-  "fullName": "João Silva",
-  "email": "joao.silva@example.com",
+  "fullName": "David Silva",
+  "email": "david.silva@example.com",
   "phone": "+55 11 99999-9999",
   "birthDate": "1990-05-15",
   "userType": "ADMIN"
