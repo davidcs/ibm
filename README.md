@@ -185,4 +185,4 @@ src
 
 ## 📜 Licença
 
-Este projeto parte de um processo seletivo. Todos os direitos reservados.
+Este projeto é parte de um processo seletivo. Todos os direitos reservados.
